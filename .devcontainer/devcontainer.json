@@ -21,7 +21,7 @@
 			"requireLocalPort": true
 		}
 	},
-//   "postCreateCommand": "chmod +x .devcontainer/spfx-setup.sh && ./.devcontainer/spfx-setup.sh",
+  "postCreateCommand": "chmod +x .devcontainer/spfx-setup.sh && ./.devcontainer/spfx-setup.sh",
   "customizations": {
     "vscode": {
       "extensions": [
