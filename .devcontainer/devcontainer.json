@@ -1,0 +1,33 @@
+{
+  "name": "SPFx Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22.19.0"
+    }
+  },
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [
+		4321,
+		35729
+	],
+	"portsAttributes": {
+		"4321": {
+			"label": "Manifest",
+			"requireLocalPort": true
+		},
+		"35729": {
+			"label": "LiveReload",
+			"requireLocalPort": true
+		}
+	},
+//   "postCreateCommand": "chmod +x .devcontainer/spfx-setup.sh && ./.devcontainer/spfx-setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.vscode-typescript-tslint-plugin",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
+}
